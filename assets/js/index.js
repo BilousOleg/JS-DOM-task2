@@ -19,9 +19,13 @@ try {
   const newBtnEl = document.createElement('button');
   // Текст для того, щоб кнопку було видно
   newBtnEl.textContent = 'Я кнопка';
+  newBtnEl.setAttribute('id', 'newBtn');
 
   anchorEl.addEventListener('click', () => {
-    anchorEl.after(newBtnEl);
+    // Умовний оператор для того, щоб не виконувати марно метод after (не знаю, робиться так чи ні, але додав)
+    if (!anchorEl.parentElement.children.namedItem('newBtn')) {
+      anchorEl.after(newBtnEl);
+    }
   });
 } catch (error) {
   console.error(error);
