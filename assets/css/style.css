@@ -1,0 +1,42 @@
+.lightbulbSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 1rem;
+}
+
+.lightbulb {
+  display: inline-block;
+  padding: 50px;
+  border-radius: 50%;
+}
+
+/* Розбив на два класи для виокремлення станів кнопки */
+.lightbulbOff {
+  background-color: lightgray;
+  border: 4px solid gray;
+}
+
+.lightbulbOn {
+  background-color: yellow;
+  border: 4px solid rgba(255, 255, 255, 0.73);
+}
+
+.switchLightBtn {
+  display: inline-block;
+  padding: 0.5rem;
+  background-color: red;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.switchLightBtn > i::before {
+  font-size: 1rem;
+  color: white;
+}
+
+.switchLightBtn:active {
+  background-color: rgb(202, 4, 4);
+}
